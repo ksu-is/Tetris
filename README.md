@@ -14,7 +14,7 @@ Will require a machine Python 3. What things you need to install the software an
 
 ```
 Give examples
-```
+Having minor diffculties getting the IDLE 3 environment on our Mac's. Downloaded but continual crashing. Setting up on a lenovo X1 Yoga to see if I have better luck.
 
 ### Installing
 
