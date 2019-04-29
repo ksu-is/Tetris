@@ -103,18 +103,16 @@ def check_collision(board, shape, offset):
    offx, offy = offset
 
    for cy, row in enumerate(shape):
+     for cx, cell in enumerate(row):
+        try:
 
-   for cx, cell in enumerate(row):
+            if cell and board[ cy + offy ][ cx + offx ]:
 
-   try:
+                return True
 
-   if cell and board[ cy + offy ][ cx + offx ]:
+        except IndexError as error:
 
-   return True
-
-   except IndexError:
-
-   return True
+            return True
 
    return False
 
@@ -134,9 +132,9 @@ def joinmatrixes(mat1, mat2, mat2off):
 
    for cy, row in enumerate(mat2):
 
-   for cx, val in enumerate(row):
+        for cx, val in enumerate(row):
 
-   mat1[cy+offy-1    ][cx+offx] += val
+            mat1[cy+offy-1    ][cx+offx] += val
 
    return mat1
 
@@ -158,7 +156,7 @@ class TetrisApp(object):
 
    def init(self):
 
-   pygame.init()
+        pygame.init()
 
    pygame.key.set_repeat(250,25)
 
@@ -195,13 +193,12 @@ class TetrisApp(object):
    
 
    def new_stone(self):
-
-   self.stone = self.next_stone[:]
+    
+        self.stone = self.next_stone[:]
 
    self.nextstone = tetrisshapes[rand(len(tetris_shapes))]
 
    self.stone_x = int(cols / 2 – len(self.stone[0])/2)
-
    self.stone_y = 0
 
   

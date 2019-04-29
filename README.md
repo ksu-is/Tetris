@@ -1,7 +1,8 @@
 # Tetris-World
 # By Emory Palmer and Christian Prater
 # We had both been in separate groups and decided that and altogther collaboration would be more beneficial to our understanding of how and what we need to do to complete a project. Something both of us humbly needed to learn
-
+##Play rules
+##Just like classical Tetris Game. You use up key to rotate a shape, left key to move left and right key to move right. Also you can use space key to drop down current shape immediately. If you want a pause, just press P key. The right panel shows the next shape.
 
 
 ## Getting Started
@@ -287,3 +288,5 @@ else:
 
 if __name__ == '__main__':
     tetris()
+
+	https://github.com/LoveDaisy/tetris_game 
