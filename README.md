@@ -1,4 +1,4 @@
-# Tetris-World
+# Tetris
 # By Emory Palmer and Christian Prater
 # We had both been in separate groups and decided that and altogther collaboration would be more beneficial to our understanding of how and what we need to do to complete a project. Something both of us humbly needed to learn
 
