@@ -127,6 +127,8 @@ class Tetris(QMainWindow):
             BOARD_DATA.moveLeft()
         elif key == Qt.Key_Right:
             BOARD_DATA.moveRight()
+        elif key == Qt.Key_Down:
+            BOARD_DATA.moveDown()
         elif key == Qt.Key_Up:
             BOARD_DATA.rotateLeft()
         elif key == Qt.Key_Space:
@@ -191,6 +193,7 @@ class Board(QFrame):
     def initBoard(self):
         self.score = 0
         BOARD_DATA.clear()
+        
 
     def paintEvent(self, event):
         painter = QPainter(self)
@@ -207,10 +210,10 @@ class Board(QFrame):
             drawSquare(painter, x * self.gridSize, y * self.gridSize, val, self.gridSize)
 
         # Draw a border
-        painter.setPen(QColor(0x777777))
-        painter.drawLine(self.width()-1, 0, self.width()-1, self.height())
-        painter.setPen(QColor(0xCCCCCC))
-        painter.drawLine(self.width(), 0, self.width(), self.height())
+        painter.setPen(QColor(0, 0, 255, 127))
+        painter.drawLine(self.width()-1, 5, self.width()-1, self.height())
+        painter.setPen(QColor(255, 0, 0, 127))
+        painter.drawLine(self.width(), 5, self.width(), self.height())
 
     def updateData(self):
         self.msg2Statusbar.emit(str(self.score))
