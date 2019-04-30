@@ -22,6 +22,7 @@ Having minor diffculties getting the IDLE 3 environment on our Mac's. Downloaded
 Copy the code into a python envirornment and run the code.
 
 
+
 ## Playing the game
 
 Explain how to run the automated tests for this system
